@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/edit.css"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+<h1 class="uncial-antiqua-regular">Edit your entry</h1>
+
+<form action="/yourBlog/:id?_method=PATCH" method="POST">
+    <textarea name="yday" class="textAreaClass"><%= yourPost %></textarea></br></br>
+    <div class="saveButtonDiv">
+    <button type="submit" class="saveButton">Save</button>
+    </div></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</form>
+<%- include("partials/footer.ejs")%>

@@ -1,0 +1,19 @@
+{
+  "name": "4.5-capstone-blog",
+  "version": "1.0.0",
+  "description": "Blog capstone Website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hrishav",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "method-override": "^3.0.0",
+    "path": "^0.12.7"
+  }
+}

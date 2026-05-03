@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUR DAILY DIARY</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+</head>
+<body class="<%= locals.yourPost ? 'postedPage' : 'homePage' %>">
+    <% if(locals.yourPost && locals.yourName) { %>
+        <h1 class="uncial-antiqua-regular">Your Diary Entry have been posted !!</h1>
+        <p class="myPost"><%= locals.yourPost %> </p>
+        <% const now=new Date(); %>
+        <ul>
+            <li class="listClass">Posted by <%= locals.yourName %> on <%= now %> </li>   
+        </ul></br>
+        <!-- now we'll add edit get request here ,like an edit button -->
+         <form action="/edit/1" method="get">
+            <div class="editButtonDiv">
+            <button type="submit" class="editButton">EDIT</button>
+            </div>
+         </form></br>
+         <!-- our DELETE BUTTON -->
+          <form action="/yourBlog/:id?_method=DELETE" method="post">
+            <div class="deleteButtonDiv">
+            <button type="submit" class="deleteButton">DELETE</button></br></br></br></br></br></br></br></br>
+            </div>
+          </form>
+    <% } else { %>
+        <h1 class="molle-regular-italic">Your Diary</h1>
+        <p class="bitcount-grid">if u have no one to share ur day ,share it with us</p></br>
+        <form action="/yourBlog" method="post">
+            <div class="flexcomp">
+            <label for="yname" class="yourName">What should i call you ? </label>
+            <input type="text" id="yname" name="yname"></br></br>
+            </div></br>
+            <div class="flexcomp2">
+            <label for="yday" class="yourDay">Tell us about ur day 😊</label>
+            <textarea id="yday" name="yday" minlength="0" maxlength="700"></textarea><br><br>
+            </div>
+            <div class="submitClassdiv">
+            <input type="submit" class="submitClass" value="SHARE">
+            </div>
+        </form>
+  <%  } %>
+  <%- include("partials/footer.ejs")%>
+</body>
+</html>

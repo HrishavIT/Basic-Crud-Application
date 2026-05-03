@@ -1,0 +1,170 @@
+.homePage {
+    background-color: rgb(241, 205, 241); /* your current purple */
+}
+
+.postedPage {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 221, 221);
+}
+.molle-regular-italic {
+    font-family: "Molle", cursive;
+    font-weight: 400;
+    font-style: italic;
+}
+h1 {
+    text-align: center;
+    color: rgb(133, 2, 133,0.6);
+    font-size: 10rem;
+}
+.flexcomp {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.yourName {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bolder;
+    font-weight: 500;
+    color: purple;
+    display: flex;
+    flex-wrap: wrap;
+}
+.uncial-antiqua-regular {
+    font-size: 70px;
+    text-align:left ;
+    color: rgb(124, 3, 124,0.6);
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+#yname {
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.flexcomp2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.yourDay {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bolder;
+    font-weight: 500;
+    color: purple;
+    display: flex;
+    justify-content: center;
+}
+#yday { 
+    height: 120px;
+    padding: 10px;
+    resize: none;   
+    background-color: aliceblue;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+}
+.submitClassdiv {
+    width: 7%;
+    margin: 0 auto;
+}
+.submitClass{
+    font-size: 18px;      
+    padding: 10px 20px; 
+    border-radius: 3px;
+    font-family: cursive;
+    background-color: purple;
+    color: aliceblue;
+}
+.submitClass:hover {
+    background-color: white;
+    color: purple;
+}
+.bitcount-grid {
+    color: aliceblue;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+.myPost {
+    font-size: 30px;
+    color: blueviolet;
+}
+.listClass {
+    color: brown;
+}
+.editButtonDiv {
+    width: 7%;
+    margin: 0 auto;
+}
+.editButton {
+    font-size: 18px;      
+    padding: 10px 20px; 
+    border-radius: 3px;
+    font-family: cursive;
+    background-color: purple;
+    color: aliceblue;
+}
+.deleteButtonDiv {
+    width: 8%;
+    margin: 0 auto;
+}
+.deleteButton {
+    font-size: 18px;      
+    padding: 10px 20px; 
+    border-radius: 3px;
+    font-family: cursive;
+    background-color: purple;
+    color: aliceblue;
+}
+.editButton:hover,
+.deleteButton:hover {
+  background-color: white;
+  color: purple;}
+@media (max-width: 768px) {
+ h1 {
+    font-size: 2.5rem;
+  }
+  #yday,
+  .textAreaClass {
+    width: 90%;
+    height: 120px;
+  }
+   #yname {
+    width: 80%;
+  }
+  .flexcomp,
+  .flexcomp2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .submitClass,
+  .editButton,
+  .deleteButton,
+  .saveButton {
+    width: 60%;
+    font-size: 16px;
+  }
+  .bitcount-grid {
+    font-size: 20px;
+  }
+  body {
+    padding: 10px;
+  }
+  textarea {
+  max-width: 600px;
+}
+}
+
